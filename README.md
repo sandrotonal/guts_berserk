@@ -1,20 +1,30 @@
+# ÖMER ÖZBAY | THE STRUGGLER - BERSERK PORTFOLIO
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <h3>"Struggle, endure, contend. For that alone is the sword of one who defies death."</h3>
 </div>
 
-# Run and deploy your AI Studio app
+##  Overview
+A meticulously crafted, **Berserk-themed** personal portfolio focusing on a dark, noir, and brutalist aesthetic. The architecture embraces high performance, seamless animations, and mobile-first responsiveness to tell a story of resilience—a true struggle against entropy.
 
-This contains everything you need to run your app locally.
+##  The Armory (Tech Stack)
+* **Frontend:** React 19 + Vite
+* **Styling:** Tailwind CSS v4, Custom Brutalist/Noir styling
+* **Animations:** Framer Motion (Page Transitions, Splash Screen Video)
+* **Icons:** Lucide React
+* **Email System:** EmailJS Integration (Working Contact Form)
 
-View your app in AI Studio: https://ai.studio/apps/3fd3d88f-18d3-4050-9a67-20f127b9db3f
+##  Features
+* **Interactive Video Splash Screen:** Fully responsive screen with `gust.mp4` playing on load alongside cinematic fades.
+* **Audio-Assisted Mobile Menu:** Tactical sword sound (`sword.mp3`) triggered upon opening the mobile menu.
+* **Thematic "Noir" UI:** Glassmorphic overlays, custom noise background, and deep crimson (#9b0000) accents.
+* **Email Dispatcher:** Integrated `@emailjs/browser` directly hooked to the "Pact" functional contact area.
 
-## Run Locally
+## 🔗 The Path (Comms)
+* **GitHub:** [sandrotonal](https://github.com/sandrotonal)
+* **Twitter (X):** [@gucluyumhe](https://x.com/gucluyumhe)
+* **Instagram:** [@00mer04](https://www.instagram.com/00mer04/)
+* **Telegram:** [@islamakhachev](https://t.me/islamakhachev)
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+*© 2026 ÖMER ÖZBAY. THE STRUGGLER.*
