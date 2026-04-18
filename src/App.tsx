@@ -193,7 +193,7 @@ export default function App() {
              <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
           </div>
 
-          <div className="relative z-10 max-w-screen-2xl w-full px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="relative z-10 max-w-screen-2xl w-full px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-10%" }} transition={{ duration: 1.5, ease: "easeOut" }}>
                 <h2 className="font-serif text-[4rem] sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.85] tracking-tighter mb-4 md:mb-8 text-white uppercase drop-shadow-xl">
                    THE MAN <br/><span className="italic text-primary drop-shadow-[0_0_10px_rgba(155,0,0,0.8)] hidden md:inline">&nbsp;</span> VS.<br /> THE WORLD.
@@ -229,7 +229,7 @@ export default function App() {
              <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
           </div>
 
-          <div className="relative z-10 max-w-screen-2xl w-full px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div className="relative z-10 max-w-screen-2xl w-full px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
              {/* Mobile header */}
              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-10%" }} transition={{ duration: 1 }} className="block lg:hidden text-left">
                 <p className="text-primary text-[10px] tracking-[0.3em] uppercase mb-4 font-bold border-b border-primary/20 pb-2 inline-block">The Arsenal</p>
@@ -281,7 +281,7 @@ export default function App() {
              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.9)_100%)]" />
           </div>
 
-          <div className="relative z-10 max-w-screen-xl px-6 md:px-12 text-center flex flex-col items-center">
+          <div className="relative z-10 max-w-screen-2xl px-4 md:px-8 text-center flex flex-col items-center">
              <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-10%" }} transition={{ duration: 1.5, ease: "easeOut" }} className="flex flex-col items-center">
                 {/* Brand of Sacrifice Image (User Uploaded) */}
                 <img 
@@ -307,7 +307,7 @@ export default function App() {
                <div className="w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_1px,rgba(255,255,255,0.01)_1px,rgba(255,255,255,0.01)_2px)] pointer-events-none opacity-50 mix-blend-overlay border-none"></div>
            </div>
 
-           <div className="relative z-10 w-full max-w-screen-xl px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+           <div className="relative z-10 w-full max-w-screen-2xl px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1.2 }} className="flex flex-col">
                  <p className="text-primary text-[10px] md:text-xs tracking-[0.5em] uppercase font-bold mb-6 flex items-center gap-4">
                     <span className="w-12 h-[2px] bg-primary"></span> Signal The Smoke
@@ -319,21 +319,21 @@ export default function App() {
                     Looking to construct a sanctuary out of lines of code, or just wish to share a tale of struggle? My comms are open.
                  </p>
 
-                 <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 mb-16">
-                    <a href="mailto:omeriletisimportfolyo@gmail.com" className="w-14 h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5" title="E-mail" target="_blank" rel="noreferrer">
-                       <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                 <div className="flex justify-center md:justify-start gap-2 sm:gap-4 md:gap-6 mb-12 md:mb-16 w-full max-w-full overflow-hidden">
+                    <a href="mailto:omeriletisimportfolyo@gmail.com" className="w-12 h-12 md:w-14 md:h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5 shrink-0" title="E-mail" target="_blank" rel="noreferrer">
+                       <Mail className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://github.com/sandrotonal" className="w-14 h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5" title="GitHub" target="_blank" rel="noreferrer">
-                       <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    <a href="https://github.com/sandrotonal" className="w-12 h-12 md:w-14 md:h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5 shrink-0" title="GitHub" target="_blank" rel="noreferrer">
+                       <Github className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://x.com/gucluyumhe" className="w-14 h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5" title="Twitter" target="_blank" rel="noreferrer">
-                       <Twitter className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    <a href="https://x.com/gucluyumhe" className="w-12 h-12 md:w-14 md:h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5 shrink-0" title="Twitter" target="_blank" rel="noreferrer">
+                       <Twitter className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://www.instagram.com/00mer04/" className="w-14 h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5" title="Instagram" target="_blank" rel="noreferrer">
-                       <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    <a href="https://www.instagram.com/00mer04/" className="w-12 h-12 md:w-14 md:h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5 shrink-0" title="Instagram" target="_blank" rel="noreferrer">
+                       <Instagram className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://t.me/islamakhachev" className="w-14 h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5" title="Telegram" target="_blank" rel="noreferrer">
-                       <Send className="w-5 h-5 group-hover:scale-110 transition-transform -ml-1" />
+                    <a href="https://t.me/islamakhachev" className="w-12 h-12 md:w-14 md:h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5 shrink-0" title="Telegram" target="_blank" rel="noreferrer">
+                       <Send className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform -ml-1 md:-ml-1" />
                     </a>
                  </div>
 
@@ -383,7 +383,7 @@ export default function App() {
           {/* Arkaplan Tabandan Gelen Kırmızımsı Dokunuş */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(155,0,0,0.1)_0%,transparent_50%)] pointer-events-none"></div>
 
-          <div className="relative z-10 w-full max-w-screen-xl px-6 md:px-12 flex flex-col md:flex-row items-center md:items-start justify-between gap-12 mb-16 md:mb-8">
+          <div className="relative z-10 w-full max-w-screen-2xl px-4 md:px-8 flex flex-col md:flex-row items-center md:items-start justify-between gap-12 mb-16 md:mb-8">
             
             {/* Sol: Navigasyon Linkleri (Mobil: Orta) */}
             <div className="flex flex-col items-center md:items-start space-y-4">
@@ -427,7 +427,7 @@ export default function App() {
           </div>
 
           {/* Alt: Copyright */}
-          <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-screen-xl px-6 md:px-12 text-[9px] md:text-[10px] font-bold text-gray-600 tracking-[0.3em] uppercase border-t border-white/10 pt-8 mt-4 mb-4 text-center">
+          <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-screen-2xl px-4 md:px-8 text-[9px] md:text-[10px] font-bold text-gray-600 tracking-[0.3em] uppercase border-t border-white/10 pt-8 mt-4 mb-4 text-center">
             <div>© {new Date().getFullYear()} ÖMER ÖZBAY. THE STRUGGLER.</div>
           </div>
         </footer>
