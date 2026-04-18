@@ -181,10 +181,6 @@ export default function App() {
                  THE DARK
               </h1>
             </motion.div>
-
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 2, repeat: Infinity, repeatType: "reverse" }} className="absolute bottom-16 md:bottom-12 text-white/30 mix-blend-screen">
-              <ChevronDown className="w-8 h-8 animate-bounce" />
-            </motion.div>
           </div>
         </section>
 
@@ -287,20 +283,18 @@ export default function App() {
 
           <div className="relative z-10 max-w-screen-xl px-6 md:px-12 text-center flex flex-col items-center">
              <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-10%" }} transition={{ duration: 1.5, ease: "easeOut" }} className="flex flex-col items-center">
-                {/* Brand of Sacrifice minimal geometric interpretation */}
-                <div className="relative w-8 h-12 mb-10 opacity-80 flex flex-col items-center justify-center">
-                   <div className="w-[2px] h-full bg-primary/80 absolute"></div>
-                   <div className="w-6 h-[2px] bg-primary/80 absolute top-2 rotate-45 transform origin-left"></div>
-                   <div className="w-6 h-[2px] bg-primary/80 absolute top-2 -rotate-45 transform origin-right"></div>
-                   <div className="w-4 h-[2px] bg-primary/80 absolute top-6 rotate-45 transform origin-left"></div>
-                   <div className="w-4 h-[2px] bg-primary/80 absolute top-6 -rotate-45 transform origin-right"></div>
-                </div>
+                {/* Brand of Sacrifice Image (User Uploaded) */}
+                <img 
+                  src="/brand.png" 
+                  alt="Brand of Sacrifice" 
+                  className="w-32 md:w-48 lg:w-56 mb-10 drop-shadow-[0_0_15px_rgba(155,0,0,0.8)] object-contain mix-blend-screen"
+                />
 
                 <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl leading-[1.05] md:leading-[1.05] tracking-tighter max-w-5xl text-white mb-10 md:mb-16 drop-shadow-[0_5px_15px_rgba(0,0,0,1)] uppercase mix-blend-screen">
                    "HE WHO FIGHTS WITH MONSTERS MIGHT TAKE CARE LEST HE THEREBY BECOME A MONSTER. AND IF YOU GAZE FOR LONG INTO AN ABYSS, THE ABYSS GAZES ALSO INTO YOU."
                 </h2>
                 <div className="h-20 md:h-32 w-[1px] bg-gradient-to-b from-primary via-primary/50 to-transparent mx-auto mb-10 md:mb-12"></div>
-                <p className="text-gray-300 font-serif max-w-2xl mx-auto text-lg md:text-xl leading-relaxed selection:bg-white/10 bg-black/90 px-8 py-10 border border-white/10 drop-shadow-lg backdrop-blur-md">
+                <p className="text-gray-300 font-serif max-w-2xl mx-auto text-lg md:text-xl leading-relaxed selection:bg-white/10 drop-shadow-xl px-4 md:px-0">
                   Coding is a struggle against entropy. Bugs, legacy systems, and overengineering are the apostles of our era. True mastery lies not in avoiding the struggle, but in walking fiercely into the darkness with a blade forged of logic, patience, and unyielding will.
                 </p>
              </motion.div>
@@ -325,7 +319,7 @@ export default function App() {
                     Looking to construct a sanctuary out of lines of code, or just wish to share a tale of struggle? My comms are open.
                  </p>
 
-                 <div className="flex flex-wrap gap-4 sm:gap-6 mb-16">
+                 <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 mb-16">
                     <a href="mailto:omeriletisimportfolyo@gmail.com" className="w-14 h-14 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all group bg-black hover:bg-primary/5" title="E-mail" target="_blank" rel="noreferrer">
                        <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     </a>
@@ -343,7 +337,7 @@ export default function App() {
                     </a>
                  </div>
 
-                 <div className="inline-block mt-auto">
+                 <div className="mt-auto flex justify-center md:inline-block">
                     <a 
                        href="https://gucluyumhe.dev" 
                        target="_blank" 
