@@ -69,8 +69,11 @@ export default function App() {
             <video 
               autoPlay 
               muted 
-              playsInline 
-              className="absolute inset-0 w-full h-full object-cover opacity-90 contrast-[1.2]"
+              loop
+              playsInline
+              controls={false}
+              disablePictureInPicture
+              className="absolute inset-0 w-full h-full object-cover opacity-90 contrast-[1.2] pointer-events-none"
             >
               <source src="/gust.mp4" type="video/mp4" />
             </video>
@@ -97,7 +100,13 @@ export default function App() {
 
         {/* Navbar Fixed */}
         <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 md:px-12 md:py-8 mix-blend-difference pointer-events-none">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1, duration: 1 }} className="font-serif text-2xl tracking-tighter uppercase text-white pointer-events-auto shadow-black drop-shadow-md">
+          <motion.div 
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
+            transition={{ delay: 0.1, duration: 1 }} 
+            className="font-serif text-2xl tracking-tighter uppercase text-white pointer-events-auto shadow-black drop-shadow-md cursor-pointer hover:text-red-500 transition-colors"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
             Ömer Özbay<span className="text-primary italic"></span>
           </motion.div>
           
@@ -141,8 +150,16 @@ export default function App() {
         {/* Hero Section */}
         <section id="hero" className="relative h-[100svh] w-full flex flex-col justify-center items-center overflow-hidden bg-black">
           {/* BG Video / Vignette */}
-          <div className="absolute inset-0 z-0">
-            <video autoPlay loop muted playsInline className="w-full h-full object-cover grayscale-[0.9] contrast-[1.4] opacity-80">
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              controls={false}
+              disablePictureInPicture
+              className="w-full h-full object-cover grayscale-[0.9] contrast-[1.4] opacity-80 pointer-events-none"
+            >
               <source src="/Berserk_Guts_Video_Oluşturma.mp4" type="video/mp4" />
             </video>
             {/* Intense vignette for Noir feel */}
@@ -372,23 +389,23 @@ export default function App() {
           {/* Arkaplan Tabandan Gelen Kırmızımsı Dokunuş */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(155,0,0,0.1)_0%,transparent_50%)] pointer-events-none"></div>
 
-          <div className="relative z-10 w-full max-w-screen-xl px-6 md:px-12 flex flex-col items-center justify-center gap-12 mb-16">
+          <div className="relative z-10 w-full max-w-screen-xl px-6 md:px-12 flex flex-col md:flex-row items-center md:items-start justify-between gap-12 mb-16 md:mb-8">
             
-            {/* Orta: Navigasyon Linkleri */}
-            <div className="flex flex-col items-center space-y-4">
+            {/* Sol: Navigasyon Linkleri (Mobil: Orta) */}
+            <div className="flex flex-col items-center md:items-start space-y-4">
               <span className="text-primary text-[10px] tracking-[0.3em] font-bold uppercase mb-2 whitespace-nowrap">The Path</span>
-              <a href="#hero" className="text-xs md:text-sm text-gray-400 hover:text-white uppercase tracking-widest transition-colors w-fit text-center">Home</a>
-              <a href="#intro" className="text-xs md:text-sm text-gray-400 hover:text-white uppercase tracking-widest transition-colors w-fit text-center">The Protagonist</a>
-              <a href="#tech" className="text-xs md:text-sm text-gray-400 hover:text-white uppercase tracking-widest transition-colors w-fit text-center">The Blades</a>
-              <a href="#philosophy" className="text-xs md:text-sm text-gray-400 hover:text-white uppercase tracking-widest transition-colors w-fit text-center">The Abyss</a>
+              <a href="#hero" className="text-xs md:text-sm text-gray-400 hover:text-white uppercase tracking-widest transition-colors w-fit text-center md:text-left">Home</a>
+              <a href="#intro" className="text-xs md:text-sm text-gray-400 hover:text-white uppercase tracking-widest transition-colors w-fit text-center md:text-left">The Protagonist</a>
+              <a href="#tech" className="text-xs md:text-sm text-gray-400 hover:text-white uppercase tracking-widest transition-colors w-fit text-center md:text-left">The Blades</a>
+              <a href="#philosophy" className="text-xs md:text-sm text-gray-400 hover:text-white uppercase tracking-widest transition-colors w-fit text-center md:text-left">The Abyss</a>
             </div>
 
-            {/* Sağ: İletişim & Yukarı Dön */}
-            <div className="flex flex-col items-center space-y-6">
-              <div className="flex flex-col items-center space-y-4">
+            {/* Sağ: İletişim & Yukarı Dön (Mobil: Orta) */}
+            <div className="flex flex-col items-center md:items-end space-y-6">
+              <div className="flex flex-col items-center md:items-end space-y-4">
                 <span className="text-primary text-[10px] tracking-[0.3em] font-bold uppercase pt-2 md:pt-0">Comms</span>
                 {/* Sosyal Medya İkonları (Footer) */}
-                <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex flex-wrap justify-center md:justify-end gap-4">
                   <a href="mailto:omeriletisimportfolyo@gmail.com" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/50 transition-all bg-black hover:bg-primary/5" title="E-mail" target="_blank" rel="noreferrer">
                      <Mail className="w-4 h-4" />
                   </a>

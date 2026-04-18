@@ -6,4 +6,4 @@ https://www.instagram.com/00mer04/
 
 
 
-bunlar sossial medya linkleri
+bunlar sosyal medya linkleri
