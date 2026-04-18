@@ -8,6 +8,28 @@ export default function App() {
   const [showSplash, setShowSplash] = useState(true);
   const [isSending, setIsSending] = useState(false);
   const form = useRef<HTMLFormElement>(null);
+  const splashVideoRef = useRef<HTMLVideoElement | null>(null);
+  const heroVideoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    // Try to autoplay muted videos to avoid browser showing the play overlay
+    const tryPlay = (v?: HTMLVideoElement | null) => {
+      if (!v) return;
+      v.muted = true;
+      v.play().catch(() => {});
+    };
+    tryPlay(splashVideoRef.current);
+    tryPlay(heroVideoRef.current);
+  }, []);
+
+  useEffect(() => {
+    // When splash visibility changes, ensure the appropriate video is playing
+    if (showSplash) {
+      splashVideoRef.current?.play().catch(() => {});
+    } else {
+      heroVideoRef.current?.play().catch(() => {});
+    }
+  }, [showSplash]);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -66,12 +88,13 @@ export default function App() {
             transition={{ duration: 1, ease: "easeInOut" }}
           >
             {/* Tam Ekran ve Mobil Uyumlu Video */}
-            <video 
-              autoPlay 
-              muted 
+            <video
+              ref={splashVideoRef}
+              preload="auto"
+              autoPlay
+              muted
               loop
               playsInline
-              controls={false}
               disablePictureInPicture
               className="absolute inset-0 w-full h-full object-cover opacity-90 contrast-[1.2] pointer-events-none"
             >
@@ -151,12 +174,13 @@ export default function App() {
         <section id="hero" className="relative h-[100svh] w-full flex flex-col justify-center items-center overflow-hidden bg-black">
           {/* BG Video / Vignette */}
           <div className="absolute inset-0 z-0 pointer-events-none">
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              controls={false}
+            <video
+              ref={heroVideoRef}
+              preload="auto"
+              autoPlay
+              loop
+              muted
+              playsInline
               disablePictureInPicture
               className="w-full h-full object-cover grayscale-[0.9] contrast-[1.4] opacity-80 pointer-events-none"
             >
